@@ -1,0 +1,18 @@
+{
+    "version": 1,
+    "disable_existing_loggers": true,
+    "formatters": {
+        "file": {
+            "format": "%(asctime)s %(levelname) %(message)s",
+            "class": "logging.handlers.RotatingFileHandler"
+        }
+    },
+    "handlers": {
+        "stdout": {
+            "class": "logging.StreamHandler",
+            "stream": "ext://sys.stdout",
+            "formatter": "json"
+        }
+    },
+    "loggers": {"": {"handlers": ["stdout"], "level": "Debug"}}
+}
