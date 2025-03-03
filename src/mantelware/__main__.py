@@ -1,6 +1,9 @@
 import click
+import logging
 
 from .locations import config_file
+
+logger = logging.getLogger('main')
 
 def create_config_file() -> None:
     f = config_file()
@@ -14,5 +17,5 @@ def create_config_file() -> None:
 
 @click.command()
 def cli():
-
-   pass 
+    logger.debug('Mantelware cli Started')
+    print(f'This is a test!')

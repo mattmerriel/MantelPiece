@@ -4,7 +4,7 @@ import src.mantelware.__main__ as mw
 import src.mantelware.components.logging_config
 
 
-logger = logging.getLogger('basic')
+logger = logging.getLogger('main')
 
 
 if __name__ == "__main__":
