@@ -15,7 +15,11 @@ def create_config_file() -> None:
     except OSError:
         pass
 
-@click.command()
+@click.group(invoke_without_command=True)
 def cli():
     logger.debug('Mantelware cli Started')
     print(f'This is a test!')
+
+@cli.command()
+def validate():
+    logger.info('Validating Date!')
